@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Example</title>
+  <script>
+    function validateForm() {
+      var answer = document.getElementById("answer").value;
+      
+      // Check if the answer is correct
+      if (answer === "correct") {
+        return true; // Proceed to the next page
+      } else {
+        alert("Incorrect answer! Please try again."); // Display an error message
+        return false; // Prevent form submission
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Quiz</h2>
+  <form action="button.html" method="post" onsubmit="return validateForm()">
+    <label for="answer">What is 2 + 2?</label>
+    <input type="text" id="answer" name="answer" required>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
